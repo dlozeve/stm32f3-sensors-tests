@@ -1,0 +1,7 @@
+*\~
+.pio
+.clang_complete
+.ccls
+.cache/
+.python-version
+compile_commands.json
