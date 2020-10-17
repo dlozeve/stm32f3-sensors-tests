@@ -5,7 +5,7 @@
 #include <sys/printk.h>
 
 /* 1000 msec = 1 sec */
-#define SLEEP_TIME_MS 1000
+#define SLEEP_TIME_MS 500
 
 /* The devicetree node identifier for the "led0" alias. */
 #define LED_NODE DT_ALIAS(led0)
@@ -46,6 +46,6 @@ void main(void) {
   while (1) {
     gpio_pin_set(led_dev, LED_PIN, (int)led_active);
     led_active = !led_active;
-    k_msleep(500);
+    k_msleep(SLEEP_TIME_MS);
   }
 }
